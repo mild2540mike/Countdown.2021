@@ -12,7 +12,7 @@
     function countDown() {
         const now = new Date().getTime();
         //console.time(now)
-        var newYear = new Date('November 29, 2020 04:12:59').getTime();
+        var newYear = new Date('November 29, 2020 04:21:59').getTime();
         const unixTimeleft = newYear - now;
 
         setElementInnerText('days', Math.floor(unixTimeleft / DAY));
@@ -22,18 +22,13 @@
     }
     
 
-    if (countDown() !== new Date('November 29, 2020 04:12:59').getTime()) {
+
         function run() {
             countDown();
             console.log(countDown, "true")
             setInterval(countDown, SECOND)
         }
         run();
-    } else {
-        console.log("HAPPY NEW YEAR 2021")
-        clearInterval(countDown)
-        console.log(countDown, "fales")
-
-    }
+    
 
 })();
