@@ -20,15 +20,20 @@
         setElementInnerText('minutes', Math.floor(unixTimeleft % HOUR / MINUTE));
         setElementInnerText('seconds', Math.floor(unixTimeleft % MINUTE / SECOND));
     }
-    
 
-
+ if (countDown() !== new Date('November 30, 2020 8:48:59').getTime()) {
         function run() {
             countDown();
             console.log(countDown, "true")
             setInterval(countDown, SECOND)
         }
         run();
-    
+    } else {
+        console.log("HAPPY NEW YEAR 2021")
+        clearInterval(countDown)
+        console.log(countDown, "fales")
+
+    }
 
 })();
+   
