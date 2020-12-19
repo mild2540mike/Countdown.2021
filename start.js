@@ -12,7 +12,7 @@
     function countDown() {
         const now = new Date().getTime();
         //console.time(now)
-        var newYear = new Date('November 29, 2020 18:10:59').getTime();
+        var newYear = new Date('December 31, 2020 59:59:59').getTime();
         const unixTimeleft = newYear - now;
 
         setElementInnerText('days', Math.floor(unixTimeleft / DAY));
@@ -21,7 +21,7 @@
         setElementInnerText('seconds', Math.floor(unixTimeleft % MINUTE / SECOND));
     }
 
- if (countDown() == new Date('November 29, 2020 18:48:59').getTime()) {
+ if (countDown() == new Date('December 31, 2020 23:59:59').getTime()) {
         function run() {
             countDown();
             //console.log(countDown, "true")
