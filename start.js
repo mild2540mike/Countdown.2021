@@ -1,4 +1,4 @@
-const comingdate = new Date("Dec 31, 2020 23:59:59");
+const comingdate = new Date("Dec 31, 2021 23:59:59");
 
 const d = document.getElementById("d");
 const h = document.getElementById("h");
