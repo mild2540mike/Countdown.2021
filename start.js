@@ -4,6 +4,7 @@ const d = document.getElementById("d");
 const h = document.getElementById("h");
 const m = document.getElementById("m");
 const s = document.getElementById("s");
+const y = document.getElementById("fullyear");
 
 const countdown = setInterval(() => {
   const now   = new Date();
@@ -13,10 +14,14 @@ const countdown = setInterval(() => {
   const mins  = Math.floor((des % (1000 * 60 * 60)) / (1000 * 60));
   const secs  = Math.floor((des % (1000 * 60)) / 1000);
 
+  let year = now.getFullYear();
+
   d.innerHTML = getTrueNumber(days);
   h.innerHTML = getTrueNumber(hours);
   m.innerHTML = getTrueNumber(mins);
   s.innerHTML = getTrueNumber(secs);
+  y.innerHTML = getTrueNumber(year);
+  
 
   x = null;
   if (x <= 0) clearInterval(x);
